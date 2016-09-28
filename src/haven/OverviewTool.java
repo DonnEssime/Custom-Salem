@@ -130,6 +130,7 @@ class OverviewTool extends Window{
     public static String shortify(String text)
     {
         int maxlength = 22;
+        if (text == null) return "";
         if(text.length()<=maxlength)
         {
             return text;
