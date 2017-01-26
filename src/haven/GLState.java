@@ -413,7 +413,6 @@ public abstract class GLState {
 	    for(int i = trans.length - 1; i >= 0; i--) {
 		nshaders[i] = shaders[i];
 		if(repl[i] || trans[i]) {
-		    GLState nst = next.states[i];
 		    ShaderMacro[] ns = (nst == null)?null:nst.shaders();
 		    if(ns != nshaders[i]) {
 			nproghash ^= System.identityHashCode(nshaders[i]) ^ System.identityHashCode(ns);
