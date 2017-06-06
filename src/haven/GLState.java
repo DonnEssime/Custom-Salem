@@ -433,10 +433,9 @@ public abstract class GLState {
 		case REQ:
 		    usesl = false;
 		    for(int i = 0; i < trans.length; i++) {
-			GLState nst = next.states[i];
-			if((nshaders[i] != null) && (nst != null) && nst.reqshaders()) {
+			if((nshaders[i] != null) && next.states[i].reqshaders()) {
 			    usesl = true;
-			    break;
+			break;
 			}
 		    }
 		    break;
